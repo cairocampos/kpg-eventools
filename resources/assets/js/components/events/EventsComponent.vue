@@ -185,9 +185,10 @@ export default {
         this.fetchEvents();
         const vm = this;
         EventBus.$on("EVENT_CREATED", function(event) {
-            console.log(event);
-            event.active = 1;
-            vm.events.data.unshift(event);
+            if(vm.filter == "organizando") {
+                event.active = 1;
+                vm.events.data.unshift(event);
+            }
         });
     }
 }
