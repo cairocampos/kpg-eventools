@@ -1,0 +1,111 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Reset
+@import "reset";
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  color: $secondary !important;
+}
+
+.text-color__default {
+  color: $text-color;
+}
+
+.login {
+  height:100vh;
+  .form__login {
+    //background: 
+  }
+}
+
+.card__events {
+  .card-header {
+    .btn-tab {
+      position: relative;
+      &.active {
+        background-color: $secondary;
+        color:#FFF;
+      }
+      &.new::after {
+        content:"";
+        display:inline-block;
+        height:10px;
+        width: 10px;
+        background-color: $primary;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+    }
+  }
+  &-container {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+/* Event
+------------*/ 
+.event {
+  &__total-confirmations {
+    //background-color: $secondary;
+  }
+  &__details-list {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    color: $text-color;
+  }
+
+}
+
+.btn-notifications {
+  position: relative;;
+  &.new::after {
+    content:"";
+    height:10px;
+    width: 10px;
+    background-color: $primary;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+}
+
+.notifications {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .item {
+    width: 220px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    background-color: #FFF;
+    color: $primary;
+    display: block;
+  }
+}
+
+.text-description__event {
+  white-space: pre-line;
+}
